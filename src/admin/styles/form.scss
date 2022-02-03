@@ -1,0 +1,26 @@
+.form {
+  &__field {
+    width: 200px;
+    padding: 5px 15px;
+    font-size: 15px;
+    margin-left: 15px;
+  }
+
+  &__radio {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    width: 80px;
+  }
+
+  &__priority {
+    width: 60px;
+    padding-right: 0px;
+  }
+
+  &__textarea {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+}

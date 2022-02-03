@@ -1,0 +1,145 @@
+.modal-item {
+  display: flex;
+
+  img {
+    width: 150px;
+
+    @media (max-width: 420px) {
+      width: 100px;
+    }
+  }
+
+  &__product-link {
+    cursor: pointer;
+  }
+
+  &__product-info {
+    padding: 0 5px;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__vehicle-info {
+    margin-bottom: 5px;
+
+    @media (max-width: 420px) {
+      font-size: 12px;
+    }
+  }
+
+  &__vehicle-level {
+    font-size: 15px;
+    vertical-align: text-bottom;
+  }
+
+  &__product-name {
+    margin-bottom: 5px;
+
+    line-height: 19px;
+    font-size: 17px;
+    color: #fff;
+
+    flex-grow: 1;
+
+    @media (max-width: 420px) {
+      font-size: 14px;
+    }
+  }
+
+  &__prices {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  &__price {
+    margin-right: 5px;
+
+    &--old {
+      text-decoration-line: line-through;
+      color: #61605c;
+    }
+
+    &--final {
+      margin-top: 5px;
+
+      font-size: 18px;
+      color: #cbac77;
+
+      @media (max-width: $tablet_width) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__discount {
+    position: relative;
+    margin-right: 15px;
+    color: #00a800;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      right: -12px;
+      width: 10px;
+      height: 14px;
+      background-image: url('../img/arrow-down.svg');
+      background-size: contain;
+    }
+  }
+
+  &__button-remove {
+    @media (max-width: 420px) {
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__purchase-button {
+    width: 80px;
+    height: 30px;
+
+    @media (max-width: 420px) {
+      margin-right: -3px;
+
+      width: 30px;
+      height: 30px;
+
+      font-size: 0;
+
+      background-color: transparent;
+      background-image: url(../img/cart.png);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__count-options {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 420px) {
+      flex-direction: column;
+    }
+  }
+
+  &__count {
+    margin: 0 10px;
+
+    color: #fff;
+
+    @media (max-width: 420px) {
+      margin: 5px 3px 2px 3px;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+.header {
+  // for height 100% in __container
+  height: 1px;
+  min-height: 60px;
+
+  background-color: black;
+
+  color: #656565;
+
+  @media (max-width: $tablet_width) {
+    min-height: 40px;
+  }
+
+  &__container {
+    height: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    @media (max-width: $tablet_width) {
+      padding: 0 15px;
+    }
+  }
+}
+
+.menu {
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
+    display: flex;
+
+    height: 100%;
+  }
+
+  &__item {
+    margin-left: 66px;
+
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 750px) {
+      margin-left: 45px;
+    }
+
+    @media (max-width: $tablet_width) {
+      margin-left: 18px;
+    }
+  }
+
+  &__logo-link {
+    height: 24px;
+    padding-left: 36px;
+
+    flex: 0 0 auto;
+
+    color: #cccccc;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 25px;
+
+    background-image: url('../img/wg-logo.png');
+    background-position: 0px center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &:hover {
+      color: #fff;
+      transition: color 0.2s ease;
+    }
+
+    @media (max-width: $tablet_width) {
+      height: 18px;
+      padding-left: 24px;
+
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  &__count {
+    font-size: 15px;
+    color: #fff;
+  }
+
+  &__button {
+    padding: 5px 0;
+
+    background-color: transparent;
+
+    color: #919191;
+    font-size: 15px;
+
+    @media (max-width: $tablet_width) {
+      font-size: 0px;
+
+      padding-left: 20px;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-position: 2px center;
+    }
+
+    &--active,
+    &:hover {
+      color: #fff;
+      transition: color 0.2s ease;
+    }
+
+    &--active {
+      @media (max-width: $tablet_width) {
+        border-radius: 3px;
+        background-color: rgb(54, 54, 54);
+        box-shadow: 0px 0px 2px 3px rgb(54, 54, 54);
+      }
+    }
+
+    &--wishlist {
+      @media (max-width: $tablet_width) {
+        background-image: url('../img/wishlist.png');
+      }
+    }
+
+    &--cart {
+      @media (max-width: $tablet_width) {
+        background-image: url('../img/cart.png');
+      }
+    }
+
+    &--login {
+      @media (max-width: $tablet_width) {
+        height: 28px;
+        background-position: 1px center;
+
+        background-image: url('../img/login.png');
+      }
+    }
+
+    &--signup {
+      padding-left: 0px;
+    }
+  }
+
+  &__text {
+    margin: 0px 5px -1px 5px;
+
+    @media (max-width: $tablet_width) {
+      display: none;
+    }
+  }
+}

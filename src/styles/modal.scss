@@ -1,0 +1,156 @@
+.modal {
+  // относительно окна
+  position: absolute;
+  top: 60px;
+  left: 0;
+
+  width: 100%;
+  height: calc(100% - 60px);
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 5;
+
+  color: #ccc;
+
+  @media (max-width: $tablet_width) {
+    // относительно body
+    top: 40px;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &--close {
+    display: none;
+  }
+
+  &__body {
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    transform: translate(-50%, 0);
+
+    width: 500px;
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $tablet_width) {
+      position: static;
+      transform: none;
+
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: -40px;
+
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+
+    &::after,
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 14px;
+      right: 3px;
+
+      width: 24px;
+      height: 3px;
+      background-color: #ccc;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &:hover::after,
+    &:hover::before {
+      background-color: #fff;
+    }
+
+    @media (max-width: $tablet_width) {
+      right: 10px;
+      top: 5px;
+    }
+  }
+
+  &__title {
+    padding: 15px 30px;
+    background-color: #000;
+    border-bottom: 1px solid #61605c;
+
+    font-size: 22px;
+    color: #fff;
+
+    @media (max-width: $tablet_width) {
+      padding: 10px 50px 10px 15px;
+      border-top: 1px solid #61605c;
+    }
+  }
+
+  &__list {
+    position: relative;
+    min-height: 35px;
+    max-height: 550px;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $tablet_width) {
+      max-height: none;
+      height: calc(100% - 220px);
+      overflow: scroll;
+    }
+  }
+
+  &__item {
+    padding: 10px 30px;
+    background-color: #202018;
+    border-bottom: 1px solid #11100d;
+
+    &:hover {
+      background-color: #27261d;
+      transition: background-color 0.2s ease;
+    }
+
+    &--mock {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+    }
+
+    @media (max-width: $tablet_width) {
+      padding: 10px 15px;
+    }
+  }
+
+  &__footer {
+    padding: 15px 30px;
+    background-color: #000;
+    border-top: 1px solid #61605c;
+    height: 136px;
+
+    &--closed {
+      display: none;
+    }
+
+    @media (max-width: $tablet_width) {
+      width: 100%;
+      padding: 10px 15px;
+    }
+
+    @media (max-width: 420px) {
+      padding: 10px 0 0 0;
+    }
+  }
+}

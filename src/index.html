@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium shop</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <h1 class="visually-hidden">World of tanks premium shop</h1>
+        <nav class="menu" id="header-menu">
+          <h2 class="visually-hidden">Main navigation</h2>
+          <a class="menu__logo-link" href="#">Premium shop </a>
+          <ul class="menu__list">
+            <li class="menu__item menu__item--current">
+              <button class="menu__button menu__button--wishlist" id="header-wishlist">
+                Wishlist <span class="menu__count" id="header-wishlist-count"></span>
+              </button>
+            </li>
+            <li class="menu__item">
+              <button class="menu__button menu__button--cart" id="header-cart">
+                Shopping cart <span class="menu__count" id="header-cart-count"></span>
+              </button>
+            </li>
+            <li class="menu__item">
+              <button class="menu__button menu__button--login">Login</button>
+              <span class="menu__text">or</span>
+              <button class="menu__button menu__button--signup">Create account</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <nav class="nav">
+      <h2 class="visually-hidden">Products type navigation</h2>
+      <a class="nav__logo-link" href="/">
+        <img src="./img/wot_logo_big.png" alt="logotip" />
+      </a>
+      <ul class="nav__list" id="nav-list">
+        <li class="nav__item">
+          <a class="nav__link nav__link--current" data-role="nav-link" href="#all">All</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" data-role="nav-link" href="#vehicles">Vehicles</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" data-role="nav-link" href="#gold">Gold</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" data-role="nav-link" href="#premium_account">Premium account</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" data-role="nav-link" href="#stuff">Stuff</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="loader"></div>
+      <div class="up-arrow"></div>
+      <div class="filter-wrapper">
+        <nav class="filter">
+          <ul class="filter__list">
+            <li>
+              <div class="filter__link">
+                <span class="flag flag--all"></span><span>All nations</span>
+              </div>
+              <ul class="sub-filter__list">
+                <li class="sub-filter__arrow"></li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--all"></span><span>All nations</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--china"></span><span>China</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--czech"></span><span>Czech</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--france"></span><span>France</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--germany"></span><span>Germany</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--japan"></span><span>Japan</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--poland"></span><span>Poland</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--sssr"></span><span>USSR</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--sweden"></span><span>Sweden</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--uk"></span><span>U.K.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--usa"></span><span>U.S.A.</span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="filter__link">
+                <span class="vehicle-type vehicle-type--all"></span><span>All types</span>
+              </div>
+              <ul class="sub-filter__list">
+                <li class="sub-filter__arrow"></li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="vehicle-type vehicle-type--all"></span><span>All types</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="vehicle-type vehicle-type--light"></span><span>Light tanks</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="vehicle-type vehicle-type--medium"></span><span>Medium tanks</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="vehicle-type vehicle-type--heavy"></span><span>Heavy tanks</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="vehicle-type vehicle-type--at-spg"></span
+                    ><span>Tank DEstroyers</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="vehicle-type vehicle-type--spg"></span><span>SPGs</span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="filter__link"><span>All tiers</span></div>
+              <ul class="sub-filter__list">
+                <li class="sub-filter__arrow"></li>
+                <li>
+                  <div class="sub-filter__link"><span>All tiers</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>I tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>II tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>III tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>IV tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>V tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>VI tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>VII tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>VIII tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>IX tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>X tier</span></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="filter__link">Show all vehicles</div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="main-container"></div>
+      <section id="modal" class="modal modal--close">
+        <div class="modal__body cart">
+          <button class="modal__close" id="close-modal"></button>
+          <header>
+            <h2 id="header-heading" class="modal__title"></h2>
+          </header>
+          <ul id="modal-list" class="modal__list">
+            <li class="modal__item modal__item--mock">
+              <article class="cart__item">Nothing yet.</article>
+            </li>
+          </ul>
+          <footer id="modal-footer" class="modal__footer modal__footer--closed cart__footer">
+            <h3>Summary details:</h3>
+            <p id="total-old-price" class="cart__details"></p>
+            <p id="total-discount" class="cart__details"></p>
+            <div class="cart__summary">
+              <p id="total-final-price" class="cart__summary-details">
+                <span class="cart__total-price cart__total-price--final"></span>
+              </p>
+              <button class="purchase-button cart__pay-button">Pay</button>
+            </div>
+          </footer>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

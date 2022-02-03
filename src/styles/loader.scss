@@ -1,0 +1,22 @@
+.loader {
+  animation: spin 2s linear infinite;
+  border: 16px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 16px solid rgba(153, 150, 147, 0.3);
+  border-radius: 50%;
+  border-top: 16px solid rgba(153, 150, 147, 0.3);
+  display: none;
+  height: 120px;
+  left: 50vw;
+  position: fixed;
+  top: 50vh;
+  width: 120px;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium shop</title>
+  </head>
+  <body>
+    <div class="login-form">
+      <h1 class="login-form__title">Sign in</h1>
+      <form id="login-form" class="form">
+        <div class="form__fields">
+          <p class="form__field">
+            <label for="login">Login: </label>
+            <input required class="form__input" type="text" autofocus id="login" name="login" />
+          </p>
+          <p class="form__field">
+            <label for="password">Password: </label>
+            <input required class="form__input" type="password" id="password" name="password" />
+          </p>
+        </div>
+        <p class="form__field--button">
+          <button class="form__submit" type="submit">Sign in</button>
+        </p>
+      </form>
+      <div class="login-form__error"></div>
+    </div>
+  </body>
+</html>

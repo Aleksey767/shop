@@ -1,0 +1,41 @@
+.edit-block {
+  display: flex;
+  height: 30px;
+  position: absolute;
+  right: 60px;
+  top: 20px;
+  width: 70px;
+
+  & > span {
+    border: 3px solid rgb(153, 150, 148);
+    border-radius: 10%;
+    height: 30px;
+    width: 30px;
+  }
+
+  &__priority {
+    align-items: center;
+    color: rgb(153, 150, 148);
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: center;
+    margin-right: 10px;
+  }
+
+  &__button {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url('../img/edit.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 70% 70%;
+    cursor: pointer;
+    transition: transform 100ms;
+
+    &:hover {
+      @media (pointer: fine) {
+        transform: scaleX(0.95) scaleY(0.95);
+      }
+    }
+  }
+}

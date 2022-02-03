@@ -1,0 +1,47 @@
+@import 'common.scss';
+@import 'reset-styles.scss';
+@import 'fonts.css';
+
+// Variables
+$desktop_width: 1100px;
+$tablet_width: 700px;
+$mobile_width: 480px;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+body {
+  background-color: #1c1b15;
+  font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+  background-image: url('../img/desktop_background.jpg');
+  background-position: center 60px;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (max-width: $tablet_width) {
+    background-image: none;
+  }
+}
+
+@import 'nav.scss';
+@import 'cart.scss';
+@import './modal.scss';
+@import './modal-item.scss';
+@import './header.scss';
+@import './list-item';
+@import './one-item.scss';
+@import './filter.scss';
+@import './loader.scss';
+@import './up-arrow.scss';

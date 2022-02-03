@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium shop</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <h1 class="visually-hidden">World of tanks premium shop</h1>
+        <nav class="menu" id="header-menu">
+          <h2 class="visually-hidden">Main navigation</h2>
+          <a class="menu__logo-link" href="#">Premium shop </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              Currency: <span id="header-currency" class="header__settings"></span>
+            </li>
+            <li class="menu__item">
+              Exchange rate: <span id="header-rate" class="header__settings"></span>
+            </li>
+            <li class="menu__item menu__item--current">
+              <button class="menu__button menu__button--wishlist" id="header-wishlist">
+                Wishlist <span class="menu__count" id="header-wishlist-count"></span>
+              </button>
+            </li>
+            <li class="menu__item">
+              <button class="menu__button menu__button--cart" id="header-cart">
+                Shopping cart <span class="menu__count" id="header-cart-count"></span>
+              </button>
+            </li>
+            <li class="menu__item">
+              <button id="logout-button" class="menu__button menu__button--login">Logout</button>
+              <span class="menu__text">or</span>
+              <button id="logoutAll-button" class="menu__button menu__button--signup">Logout all</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <nav class="nav">
+      <h2 class="visually-hidden">Products type navigation</h2>
+      <a class="nav__logo-link" href="/">
+        <img src="../img/wot_logo_big.png" alt="logotip" />
+      </a>
+      <ul class="nav__list" id="nav-list">
+        <li class="nav__item">
+          <a class="nav__link nav__link--current" data-role="nav-link" href="#all">All</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" data-role="nav-link" href="#vehicles">Vehicles</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" data-role="nav-link" href="#gold">Gold</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" data-role="nav-link" href="#premium_account">Premium account</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" data-role="nav-link" href="#stuff">Stuff</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="loader"></div>
+      <div class="up-arrow"></div>
+      <div id="edit-settings" class="settings"></div>
+      <div id="create-product" class="plus"></div>
+      <div class="filter-wrapper">
+        <nav class="filter">
+          <ul class="filter__list">
+            <li>
+              <div class="filter__link">
+                <span class="flag flag--all"></span><span>All nations</span>
+              </div>
+              <ul class="sub-filter__list">
+                <li class="sub-filter__arrow"></li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--all"></span><span>All nations</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--china"></span><span>China</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--czech"></span><span>Czech</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--france"></span><span>France</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--germany"></span><span>Germany</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--japan"></span><span>Japan</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--poland"></span><span>Poland</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--sssr"></span><span>USSR</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--sweden"></span><span>Sweden</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--uk"></span><span>U.K.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="flag flag--usa"></span><span>U.S.A.</span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="filter__link">
+                <span class="vehicle-type vehicle-type--all"></span><span>All types</span>
+              </div>
+              <ul class="sub-filter__list">
+                <li class="sub-filter__arrow"></li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="vehicle-type vehicle-type--all"></span><span>All types</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="vehicle-type vehicle-type--light"></span><span>Light tanks</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="vehicle-type vehicle-type--medium"></span><span>Medium tanks</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="vehicle-type vehicle-type--heavy"></span><span>Heavy tanks</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="vehicle-type vehicle-type--at-spg"></span
+                    ><span>Tank DEstroyers</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="sub-filter__link">
+                    <span class="vehicle-type vehicle-type--spg"></span><span>SPGs</span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="filter__link"><span>All tiers</span></div>
+              <ul class="sub-filter__list">
+                <li class="sub-filter__arrow"></li>
+                <li>
+                  <div class="sub-filter__link"><span>All tiers</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>I tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>II tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>III tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>IV tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>V tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>VI tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>VII tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>VIII tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>IX tier</span></div>
+                </li>
+                <li>
+                  <div class="sub-filter__link"><span>X tier</span></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="filter__link">Show all vehicles</div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="main-container"></div>
+      <section id="modal" class="modal modal--close">
+        <div class="modal__body cart">
+          <button class="modal__close" id="close-modal"></button>
+          <header>
+            <h2 id="header-heading" class="modal__title"></h2>
+          </header>
+          <ul id="modal-list" class="modal__list">
+            <li class="modal__item modal__item--mock">
+              <article class="cart__item">Nothing yet.</article>
+            </li>
+          </ul>
+          <footer id="modal-footer" class="modal__footer modal__footer--closed cart__footer">
+            <h3>Summary details:</h3>
+            <p id="total-old-price" class="cart__details"></p>
+            <p id="total-discount" class="cart__details"></p>
+            <div class="cart__summary">
+              <p id="total-final-price" class="cart__summary-details">
+                <span class="cart__total-price cart__total-price--final"></span>
+              </p>
+              <button class="purchase-button cart__pay-button">Pay</button>
+            </div>
+          </footer>
+        </div>
+      </section>
+      <section id="settings-window" class="modal modal--fixed modal--close">
+        <div class="modal__body">
+          <button class="modal__close" id="close-settings-form"></button>
+          <h2 class="modal__title">Edit settings</h2>
+          <form id="settings-form">
+            <div class="modal__list">
+              <p class="modal__item">
+                <label for="form-currency">Currency: </label>
+                <input
+                  required
+                  class="form__input"
+                  type="text"
+                  id="form-currency"
+                  name="currency"
+                />
+              </p>
+              <p class="modal__item">
+                <label for="form-rate">Exchange rate: </label>
+                <input
+                  required
+                  class="form__input"
+                  type="text"
+                  id="form-rate"
+                  name="exchangeRate"
+                />
+              </p>
+              <p class="modal__item">
+                <button class="modal__button" type="submit">Send</button>
+                <div class="settings-form-error"></div>
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section id="edit-product-window" class="modal modal--fixed modal--close">
+        <div class="modal__body">
+          <button class="modal__close" id="close-edit-form"></button>
+          <h2 class="modal__title">Edit product</h2>
+          <form class="form" id="edit-product-form">
+            <div class="modal__list">
+              <label class="modal__item"
+                >Name: <input class="form__field" type="text" name="name" required
+              /></label>
+              <label class="modal__item">
+                Type:
+                <select class="form__field" name="types" multiple required>
+                  <option value="vehicle">Vehicle</option>
+                  <option value="gold">Gold</option>
+                  <option value="premium_account">Premium account</option>
+                  <option value="stuff">Stuff</option>
+                </select>
+              </label>
+              <label class="modal__item">
+                Vehicle type:<select class="form__field" name="vehicle.type">
+                  <option value="" selected disabled hidden>type</option>
+                  <option value="heavy">Heavy</option>
+                  <option value="medium">Medium</option>
+                  <option value="light">Light</option>
+                  <option value="at-spg">at-spg</option>
+                  <option value="spg">spg</option>
+                </select>
+              </label>
+              <label class="modal__item">
+                Vehicle nation:<select class="form__field" name="vehicle.nation">
+                  <option value="" selected disabled hidden>nation</option>
+                  <option value="usa">USA</option>
+                  <option value="uk">UK</option>
+                  <option value="japan">Japan</option>
+                  <option value="germany">Germany</option>
+                  <option value="france">France</option>
+                  <option value="china">China</option>
+                </select>
+              </label>
+              <label class="modal__item">
+                Vehicle level:<select class="form__field" name="vehicle.level">
+                  <option value="" selected disabled hidden>level</option>
+                  <option value="1">I</option>
+                  <option value="2">II</option>
+                  <option value="3">III</option>
+                  <option value="4">IV</option>
+                  <option value="5">V</option>
+                  <option value="6">VI</option>
+                  <option value="7">VII</option>
+                  <option value="8">VIII</option>
+                  <option value="9">IX</option>
+                  <option value="10">X</option>
+                </select>
+              </label>
+              <label class="modal__item">
+                Price: <input class="form__field" type="number" min="1" name="price" required />
+              </label>
+              <label class="modal__item">
+                Sale price: <input class="form__field" type="number" min="1" name="salePrice" />
+              </label>
+              <label class="modal__item">
+                Show discont as
+                <div class="form__field">
+                  <label>
+                    %
+                    <input type="radio" name="showDiscountAs" value="%" />
+                  </label>
+                  <label>
+                    Money
+                    <input type="radio" name="showDiscountAs" value="money" checked />
+                  </label>
+                </div>
+              </label>
+              <label class="modal__item"
+                >Countable: <input class="form__field" type="checkbox" name="isCountable"
+              /></label>
+              <label class="modal__item"
+                >Priority:
+                <input class="form__field" name="priority" type="number" min="1" max="31"
+              /></label>
+              <label class="modal__item">
+                Image:
+                <input
+                  class="form__field"
+                  type="file"
+                  name="image"
+                  accept="image/jpeg,image/jpg,image/png"
+                />
+              </label>
+              <label class="modal__item"
+                >Details:
+                <textarea class="form__field" rows="10" cols="45" name="details"></textarea>
+              </label>
+              <p class="modal__item">
+                <button class="modal__button" type="submit">Update</button>
+                  <div class="create-form-error"></div>
+              </p>
+              <p class="modal__item">
+                <input name="deleteProduct" class="modal__delete-button" type="button" value="delete product" />
+              </p>              
+            </div>
+          </form>
+        </div>
+      </section>
+      <section id="create-product-window" class="modal modal--fixed modal--close">
+        <div class="modal__body">
+          <button class="modal__close" id="close-create-form"></button>
+          <h2 class="modal__title">Сreate product</h2>
+          <form class="form" id="create-product-form">
+            <div class="modal__list">
+              <label class="modal__item"
+                >Name: <input class="form__field" type="text" name="name" required
+              /></label>
+              <label class="modal__item">
+                Type:
+                <select class="form__field" name="types" multiple required>
+                  <option value="vehicle">Vehicle</option>
+                  <option value="gold">Gold</option>
+                  <option value="premium_account">Premium account</option>
+                  <option value="stuff">Stuff</option>
+                </select>
+              </label>
+              <label class="modal__item">
+                Vehicle type:<select class="form__field" name="vehicle.type">
+                  <option value="" selected disabled hidden>type</option>
+                  <option value="heavy">Heavy</option>
+                  <option value="medium">Medium</option>
+                  <option value="light">Light</option>
+                  <option value="at-spg">at-spg</option>
+                  <option value="spg">spg</option>
+                </select>
+              </label>
+              <label class="modal__item">
+                Vehicle nation:<select class="form__field" name="vehicle.nation">
+                  <option value="" selected disabled hidden>nation</option>
+                  <option value="usa">USA</option>
+                  <option value="uk">UK</option>
+                  <option value="japan">Japan</option>
+                  <option value="germany">Germany</option>
+                  <option value="france">France</option>
+                  <option value="china">China</option>
+                </select>
+              </label>
+              <label class="modal__item">
+                Vehicle level:<select class="form__field" name="vehicle.level">
+                  <option value="" selected disabled hidden>level</option>
+                  <option value="1">I</option>
+                  <option value="2">II</option>
+                  <option value="3">III</option>
+                  <option value="4">IV</option>
+                  <option value="5">V</option>
+                  <option value="6">VI</option>
+                  <option value="7">VII</option>
+                  <option value="8">VIII</option>
+                  <option value="9">IX</option>
+                  <option value="10">X</option>
+                </select>
+              </label>
+              <label class="modal__item">
+                Price: <input class="form__field" type="number" min="1" name="price" required />
+              </label>
+              <label class="modal__item">
+                Sale price: <input class="form__field" type="number" min="1" name="salePrice" />
+              </label>
+              <label class="modal__item">
+                Show discont as
+                <div class="form__radio">
+                  <label>
+                    %
+                    <input type="radio" name="showDiscountAs" value="%" />
+                  </label>
+                  <label>
+                    Money
+                    <input type="radio" name="showDiscountAs" value="money" checked />
+                  </label>
+                </div>
+              </label>
+              <label class="modal__item"
+                >Countable: <input type="checkbox" name="isCountable"
+              /></label>
+              <label class="modal__item"
+                >Priority:
+                <input class="form__field form__priority" name="priority" type="number" min="1" max="30"
+              /></label>
+              <label class="modal__item">
+                Image:
+                <input
+                  class="form__field"
+                  type="file"
+                  required
+                  name="image"
+                  accept="image/jpeg,image/jpg,image/png"
+                />
+              </label>
+              <label class="modal__item"
+                >Details:
+                <textarea class="form__field form__textarea" rows="10" cols="45" name="details"></textarea>
+              </label>
+              <p class="modal__item">
+                <button class="modal__button" type="submit">Create</button>
+                  <div class="create-form-error"></div>
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

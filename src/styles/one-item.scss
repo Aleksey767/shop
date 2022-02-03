@@ -1,0 +1,144 @@
+.one-item {
+  max-width: 1260px;
+  padding: 0 30px;
+  margin: 0 auto;
+
+  @media (max-width: $tablet_width) {
+    padding: 0 15px;
+  }
+
+  & hr {
+    border: none; //Убираем границу для браузера Firefox
+    color: rgb(109, 101, 92); //Цвет линии для остальных браузеров
+    background-color: rgb(109, 101, 92); //Цвет линии для браузера Firefox и Opera
+    height: 2px; //Толщина линии
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    @media (max-width: $tablet_width) {
+      flex-direction: column;
+    }
+  }
+
+  &__data {
+  }
+
+  &__title {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    margin: 30px 0;
+    line-height: 1.2;
+
+    @media (max-width: $tablet_width) {
+      margin: 18px 0;
+      font-size: 25px;
+    }
+  }
+
+  &__name {
+    align-items: center;
+    color: rgb(204, 204, 204);
+    display: flex;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 15px;
+    line-height: 1.2;
+    margin: 10px 0;
+    text-transform: uppercase;
+
+    & > span {
+      top: 0;
+    }
+  }
+
+  &__img-container {
+    flex-basis: 700px;
+
+    @media (max-width: $tablet_width) {
+      flex-basis: 0;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  &__purchase-container {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $tablet_width) {
+      flex-direction: row;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgb(35, 35, 35);
+    }
+
+    & > button {
+      font-size: 20px;
+      width: 150px;
+      height: 60px;
+
+      @media (max-width: $tablet_width) {
+        flex: 1;
+      }
+    }
+  }
+
+  &__price {
+    margin: 30px 0;
+
+    @media (max-width: $tablet_width) {
+      margin: 0 0;
+      flex: 1;
+      text-align: center;
+      align-self: center;
+    }
+
+    & > span {
+      font-size: 25px;
+
+      @media (max-width: $mobile_width) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__details {
+    & > h4 {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 25px;
+      text-transform: uppercase;
+      color: rgb(255, 255, 255);
+      margin: 15px 0;
+      line-height: 1.2;
+
+      @media (max-width: $tablet_width) {
+        font-size: 20px;
+      }
+    }
+
+    & > p {
+      margin-top: 40px;
+      padding-bottom: 70px;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+      color: rgb(153, 153, 153);
+
+      @media (max-width: $tablet_width) {
+        margin-top: 20px;
+      }
+    }
+  }
+}

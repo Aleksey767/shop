@@ -1,0 +1,217 @@
+.purchase-button {
+  background-color: rgb(233, 81, 4);
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+
+  &:hover {
+    @media (pointer: fine) {
+      background-color: rgb(247, 140, 3);
+    }
+  }
+
+  &:disabled {
+    background-color: rgba(233, 81, 4, 0.5);
+  }
+}
+
+.heart {
+  background-color: rgba(0, 0, 0, 0);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  height: 30px;
+  transition: transform 100ms;
+  width: 30px;
+
+  &:hover {
+    @media (pointer: fine) {
+      transform: scaleX(0.95) scaleY(0.95);
+    }
+  }
+
+  &--empty {
+    background-image: url('../img/heart_empty.png');
+  }
+
+  &--full {
+    background-image: url('../img/heart_full.png');
+  }
+}
+
+.options-button {
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+
+  position: relative;
+
+  &:hover {
+    background-color: #313131;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  &--plus {
+    &::after,
+    &::before {
+      content: '';
+
+      position: absolute;
+      width: 14px;
+      height: 3px;
+      background-color: #ccc;
+
+      top: 10px;
+      left: 4px;
+    }
+
+    &::before {
+      transform: rotate(90deg);
+    }
+
+    &:hover::after,
+    &:hover::before {
+      background-color: #fff;
+    }
+  }
+
+  &--minus {
+    &::before {
+      content: '';
+
+      position: absolute;
+      width: 14px;
+      height: 3px;
+      background-color: #ccc;
+
+      top: 10px;
+      left: 4px;
+    }
+
+    &:hover::before {
+      background-color: #fff;
+    }
+  }
+
+  &--remove {
+    &::after,
+    &::before {
+      content: '';
+
+      position: absolute;
+      width: 18px;
+      height: 3px;
+      background-color: rgb(139, 0, 0);
+
+      top: 10px;
+      left: 2px;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.flag {
+  position: relative;
+  top: 2px;
+
+  display: inline-block;
+  width: 21px;
+  height: 14px;
+  margin-right: 5px;
+
+  background-repeat: no-repeat;
+
+  &--all {
+    background-image: url('../img/nations/all.png');
+  }
+
+  &--sssr {
+    background-image: url('../img/nations/sssr.png');
+  }
+
+  &--usa {
+    background-image: url('../img/nations/usa.png');
+  }
+
+  &--germany {
+    background-image: url('../img/nations/germany.png');
+  }
+
+  &--uk {
+    background-image: url('../img/nations/uk.png');
+  }
+
+  &--france {
+    background-image: url('../img/nations/france.png');
+  }
+
+  &--japan {
+    background-image: url('../img/nations/japan.png');
+  }
+
+  &--china {
+    background-image: url('../img/nations/china.png');
+  }
+
+  &--poland {
+    background-image: url('../img/nations/poland.png');
+  }
+
+  &--sweden {
+    background-image: url('../img/nations/sweden.png');
+  }
+
+  &--czech {
+    background-image: url('../img/nations/czech.png');
+  }
+}
+
+.vehicle-type {
+  position: relative;
+  top: 2px;
+
+  display: inline-block;
+  width: 11px;
+  height: 14px;
+  margin-right: 5px;
+
+  background-position: 0;
+  background-repeat: no-repeat;
+
+  &--all {
+    background-image: url('../img/vehicle-types/all.png');
+  }
+
+  &--light {
+    background-image: url('../img/vehicle-types/light.png');
+  }
+
+  &--medium {
+    background-image: url('../img/vehicle-types/medium.png');
+  }
+
+  &--heavy {
+    background-image: url('../img/vehicle-types/heavy.png');
+  }
+
+  &--at-spg {
+    background-image: url('../img/vehicle-types/at-spg.png');
+  }
+
+  &--spg {
+    background-image: url('../img/vehicle-types/spg.png');
+  }
+
+  &--multirole {
+    background-image: url('../img/vehicle-types/multirole.png');
+  }
+}

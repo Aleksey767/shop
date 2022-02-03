@@ -1,0 +1,10 @@
+$desktop_width: 1100px;
+$tablet_width: 700px;
+$mobile_width: 480px;
+
+@import './plus.scss';
+@import './edit-block.scss';
+@import './settings.scss';
+@import './modal.scss';
+@import './form.scss';
+@import './header.scss';
